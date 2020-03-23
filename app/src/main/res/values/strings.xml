@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Datesheet</string>
+    <string name="_60_minutes">60 Minutes</string>
+    <string name="_9_30_am_10_30_am">9:30 AM- 10:30 AM</string>
+    <string name="_26_may_2019">26 May 2019</string>
+    <string name="maths">Maths</string>
+    <string name="todo">TODO</string>
+
 </resources>

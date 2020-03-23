@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <ImageView
     android:id="@+id/img_round"
@@ -16,12 +18,14 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/tv_math"
     app:layout_constraintBottom_toTopOf="@+id/view"
-    />
+    android:layout_marginStart="20dp"
+    tools:ignore="UnknownIdInLayout"
+    android:contentDescription="@string/todo" />
     <TextView
         android:id="@+id/tv_math"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Maths"
+        android:text="@string/maths"
         android:textColor="#2c83c7"
         android:layout_marginLeft="7dp"
         app:layout_constraintEnd_toStartOf="@+id/img_round"
@@ -29,18 +33,19 @@
         app:layout_constraintStart_toEndOf="@+id/img_round"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/img_round"
-        android:textSize="25dp"
-        />
+        android:textSize="25sp"
+        android:layout_marginStart="7dp" />
     <View
         android:id="@+id/view_line"
         android:layout_width="1dp"
         android:background="#2c83c7"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="10dp"
         app:layout_constraintStart_toStartOf="@id/img_round"
         app:layout_constraintTop_toBottomOf="@+id/img_round"
-        />
+        app:layout_constraintBottom_toBottomOf="@+id/card_view"
+        android:layout_marginStart="10dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
@@ -54,7 +59,8 @@
         app:layout_constraintTop_toTopOf="@+id/view_line"
         app:layout_constraintTop_toBottomOf="@id/tv_math"
 
-        >
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="45dp">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -62,8 +68,8 @@
 
 <TextView
     android:id="@+id/tv_date"
-    android:textSize="17dp"
-    android:text="26 May 2019"
+    android:textSize="17sp"
+    android:text="@string/_26_may_2019"
     android:textColor="#333333"
     android:layout_marginLeft="8dp"
     android:layout_marginTop="15dp"
@@ -71,7 +77,8 @@
     android:layout_height="wrap_content"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toTopOf="@+id/img_clock"/>
+    app:layout_constraintBottom_toTopOf="@+id/img_clock"
+    android:layout_marginStart="8dp" />
     <ImageView
         android:id="@+id/img_clock"
         android:layout_width="15dp"
@@ -86,14 +93,14 @@
         android:layout_marginBottom="16dp"
 
 
-        />
+        android:contentDescription="@string/todo" />
     <TextView
         android:id="@+id/tv_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="9:30 AM- 10:30 AM"
+        android:text="@string/_9_30_am_10_30_am"
         android:textColor="#333333"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:layout_marginLeft="10dp"
         app:layout_constraintStart_toEndOf="@+id/img_clock"
         app:layout_constraintTop_toBottomOf="@+id/tv_date"
@@ -102,26 +109,24 @@
         app:layout_constraintTop_toTopOf="@id/img_clock"
 
 
-        />
+        android:layout_marginStart="10dp" />
     <TextView
         android:id="@+id/tv_minutes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="60 Minutes"
+        android:text="@string/_60_minutes"
         android:textColor="#17c2d9"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:layout_marginLeft="14dp"
         app:layout_constraintStart_toEndOf="@+id/tv_time"
         app:layout_constraintTop_toTopOf="@+id/tv_time"
         app:layout_constraintBottom_toBottomOf="@+id/tv_time"
-        />
+        android:layout_marginStart="14dp" />
 
 
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
     </androidx.cardview.widget.CardView>

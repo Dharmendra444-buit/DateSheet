@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ImageView
+    android:id="@+id/img_round"
+    android:layout_width="26dp"
+    android:layout_height="26dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:background="#f9c847"
+    android:src="@drawable/ic_circle"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/tv_math"
+    app:layout_constraintBottom_toTopOf="@+id/view"
+    />
+    <TextView
+        android:id="@+id/tv_math"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maths"
+        android:textColor="#2c83c7"
+        android:layout_marginLeft="7dp"
+        app:layout_constraintEnd_toStartOf="@+id/img_round"
+        app:layout_constraintTop_toTopOf="@id/img_round"
+        app:layout_constraintStart_toEndOf="@+id/img_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/img_round"
+        android:textSize="25dp"
+        />
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="1dp"
+        android:background="#2c83c7"
+        android:layout_height="120dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="@id/img_round"
+        app:layout_constraintTop_toBottomOf="@+id/img_round"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_math"
+
+        >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp">
+
+<TextView
+    android:id="@+id/tv_date"
+    android:textSize="17dp"
+    android:text="26 May 2019"
+    android:textColor="#333333"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="15dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/img_clock"/>
+    <ImageView
+        android:id="@+id/img_clock"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_clock"
+        android:layout_marginTop="19dp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/tv_date"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        app:layout_constraintEnd_toStartOf="@+id/tv_time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+
+
+        />
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9:30 AM- 10:30 AM"
+        android:textColor="#333333"
+        android:textSize="15dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@+id/img_clock"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        app:layout_constraintBottom_toBottomOf="@id/img_clock"
+        app:layout_constraintEnd_toStartOf="@+id/tv_minutes"
+        app:layout_constraintTop_toTopOf="@id/img_clock"
+
+
+        />
+    <TextView
+        android:id="@+id/tv_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60 Minutes"
+        android:textColor="#17c2d9"
+        android:textSize="15dp"
+        android:layout_marginLeft="14dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_time"
+        app:layout_constraintTop_toTopOf="@+id/tv_time"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

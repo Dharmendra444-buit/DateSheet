@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val arrayList=ArrayList<Model>()
+
         arrayList.add(Model(R.drawable.ic_circle,"Maths","26 May2019",R.drawable.ic_clock,"9:30 AM - 10:30 AM","60 Minutes"))
         arrayList.add(Model(R.drawable.ic_circle,"English","27 May2019",R.drawable.ic_clock,"9:30 AM - 10:30 AM","60 Minutes"))
         arrayList.add(Model(R.drawable.ic_circle,"Geography","30 May2019",R.drawable.ic_clock,"9:30 AM - 10:30 AM","60 Minutes"))

@@ -5,5 +5,24 @@
     <string name="_26_may_2019">26 May 2019</string>
     <string name="maths">Maths</string>
     <string name="todo">TODO</string>
+    <string name="exam_guidelines">Exam Guidelines</string>
+    <string name="sucess">Success</string>
+    <string name="failure">Failure</string>
+    <string name="_16_22">16:22</string>
+    <string name="_23_may_2019">23 MAY 2019</string>
+    <string name="date">DATE</string>
+    <string name="upi98345825">UPI98345825</string>
+    <string name="transaction_id">TRANSACTION ID</string>
+    <string name="details_of_transaction">DETAILS OF TRANSACTION</string>
+    <string name="share">Share</string>
+    <string name="_2600">2600</string>
+    <string name="u20b9">₹</string>
+    <string name="updated_balance">Updated Balance:</string>
+    <string name="aman_rai_s_n_wallet_credited_successfully">Aman Rai\'s \n wallet Credited Successfully</string>
+    <string name="_2500">2500</string>
+
+    <string name="time">TIME</string>
+
 
 </resources>
+

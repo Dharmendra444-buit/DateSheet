@@ -1,12 +1,16 @@
 package com.example.datesheet
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
+import androidx.fragment.app.FragmentTransaction
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     var btn:Boolean =true
+  //  val fragclass=SuccessFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,20 +34,34 @@ class MainActivity : AppCompatActivity() {
 
 
 
-       // btn_icon.setOnClickListener {
+        btn_sucess.setOnClickListener {
 
-        //}
-        btn_icon.setOnClickListener {
-            if (btn){
-                recyclerview123.visibility=View.GONE
-                btn=false
-            }
+            // comment code is not use in project it is used for fragment
+           /* val fr=SuccessFragment.newInstance(bundleOf("isSuccess" to true))
+           //val transaction=supportFragmentManager.beginTransaction()
+            transaction.add(R.id.frameLayout,fr,null)
+           transaction.addToBackStack(null)
+            transaction.commit() */
 
-            else
-            {
-                recyclerview123.visibility=View.VISIBLE
-                btn=true
-            }
+            val intent=Intent(this,SuccessActivity::class.java)
+            intent.putExtra("isSuccess",true)
+            startActivity(intent)
+        }
+
+        btn_failure.setOnClickListener {
+
+            // comment code is not use in project it is used for fragment SuccessFragment.xml and SuccessFragment.kt also not used
+
+          /*  val fr=SuccessFragment.newInstance(bundleOf("isSuccess" to false))
+            val transaction=supportFragmentManager.beginTransaction()
+            transaction.add(R.id.frameLayout,fr,null)
+            transaction.addToBackStack(null)
+            transaction.commit() */
+
+
+            val intent=Intent(this,SuccessActivity::class.java)
+            intent.putExtra("isSuccess",false)
+            startActivity(intent)
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.example.datesheet
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,7 +18,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        openDialog(isSuccessClicked = true)
+        // method call openDialog(isSuccessClicked=true)
+        openDialog()
+        //openDialog(isSuccessClicked = true)
         val arrayList=ArrayList<Model>()
 
         arrayList.add(Model(R.drawable.ic_circle,"Maths","26 May2019",R.drawable.ic_clock,"9:30 AM - 10:30 AM","60 Minutes"))
@@ -74,10 +77,13 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("isSuccess",false)
             startActivity(intent)  */
         }
+        btn_open_viewPager.setOnClickListener {
+            val intent=Intent(this,ViewPagerActivity::class.java)
+            startActivity(intent)
+        }
     }
-
-
-    public fun openDialog(isSuccessClicked:Boolean){
+   fun openDialog(){
+   // fun openDialog(isSuccessClicked:Boolean){
         var exampleDialog=Dialog()
         exampleDialog.show(supportFragmentManager,"example dialog")
 

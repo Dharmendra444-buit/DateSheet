@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="152sp"
+        android:background="#ffd800"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#0a0a0a"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="14sp"
+
+        android:textSize="18sp"
+        tools:text="Never lost hope in you!…"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="45sp"
+        android:layout_marginEnd="45sp" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="230sp"
+        tools:src="@drawable/freedom"
+        android:layout_marginRight="16sp"
+        android:layout_marginLeft="16sp"
+        android:layout_marginTop="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:text="Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.”"
+        app:layout_constraintStart_toStartOf="@+id/iv_img"
+        app:layout_constraintEnd_toEndOf="@id/iv_img"
+        app:layout_constraintTop_toBottomOf="@+id/iv_img"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Share"
+        android:background="#f9f9f9"
+        android:textStyle="bold"
+        android:textColor="#0087e2"
+        android:layout_marginTop="10sp"
+        android:drawableEnd="@drawable/ic_share"
+        android:padding="5sp"
+        app:layout_constraintStart_toStartOf="@id/tv_description"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description"
+        android:drawableRight="@drawable/ic_share" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_swipe_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="  Swipe up to view previous"
+        android:background="#f9f9f9"
+        android:textStyle="bold"
+        android:textColor="#999999"
+        android:layout_marginTop="8sp"
+        android:drawableStart="@drawable/ic_up_arrow"
+
+        app:layout_constraintStart_toStartOf="@id/tv_share"
+        app:layout_constraintTop_toBottomOf="@+id/tv_share"
+        android:drawableLeft="@drawable/ic_up_arrow" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="#0087e2"
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="16sp"
+        android:layout_marginLeft="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_swipe_up"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_school"
+        android:layout_width="wrap_content"
+        android:textStyle="italic"
+        android:textSize="14sp"
+        android:layout_marginTop="10sp"
+        android:layout_height="wrap_content"
+        tools:text="Matagujri Public School"
+        android:textColor="#999999"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="10/03/2020 09:35 AM"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_school"
+        app:layout_constraintTop_toBottomOf="@id/tv_school"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
